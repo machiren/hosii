@@ -36,7 +36,6 @@ jobs:
           echo "DATABASE_URL=mysql://root:root@localhost:3306/test" > server/prisma/.env
       - run: npm run typecheck
       - run: |
-          npm run migrate:dev
           npm test
         env:
           API_JWT_SECRET: test_secret
