@@ -1,34 +1,15 @@
-import { GetStaticPaths, GetStaticPropsContext } from 'next'
-import { useRouter } from 'next/router'
+import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
 
-const Article = ({article}: { article: { id: number, title: string} }) => {
-  const router = useRouter()
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
+const Article = ({ article }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return <p>記事</p>
 }
 
-
-const getStaticPaths: GetStaticPaths = async ()  =>  {
+const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+  const article = { id: 1, title: 'TITLE' };
   return {
-    paths: [],
-    fallback: true,
-  }
-}
-
-export async function getStaticProps({ params }: GetStaticPropsContext) {
-  const hasArticle = true;
-  const article = { id: 1, title: 'タイトル' };
-
-  if(!hasArticle){
-    return {
-      notFound: true
-    }
-  }
-
-  return {
-    props: { article },
+    props: {
+      article
+    },
   }
 }
 
