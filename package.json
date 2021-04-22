@@ -9,7 +9,7 @@
     "dev:aspida": "aspida --watch",
     "build": "run-p build:client build:server",
     "prebuild:client": "npm run generate",
-    "build:client": "next build && next export",
+    "build:client": "next build",
     "build:server": "npm run build --prefix server",
     "generate": "run-p generate:*",
     "generate:aspida": "aspida",
@@ -39,6 +39,7 @@
     "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^7.2.3",
     "swr": "^0.4.2"
   },
   "devDependencies": {
