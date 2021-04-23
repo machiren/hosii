@@ -1,5 +1,5 @@
 {
-  "name": "frourio-app",
+  "name": "hosii",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,8 @@
     "pretest": "npm run generate",
     "test": "jest",
     "pretypecheck": "npm run generate",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p server"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p server",
+    "check": "npm run typecheck && npm run lint"
   },
   "dependencies": {
     "@aspida/fetch": "^1.6.3",
@@ -54,9 +55,8 @@
     "babel-jest": "^26.6.3",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-jest": "^24.3.5",
     "eslint-plugin-react": "^7.22.0",
     "fastify": "^3.12.0",
     "fastify-cors": "^5.2.0",

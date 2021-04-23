@@ -2,18 +2,19 @@ module.exports = {
   root: true,
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:prettier/recommended',
-    'prettier'
+    'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'prettier',
   ],
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'jest'],
   parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
+    'jest/globals': true
   },
   settings: {
     react: {
@@ -21,6 +22,7 @@ module.exports = {
     }
   },
   parserOptions: {
+    project: './tsconfig.json',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
