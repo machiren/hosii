@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
 
-const Article = ({ article }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const Article = (_props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ const Article = ({ article }: InferGetServerSidePropsType<typeof getServerSidePr
   )
 }
 
-const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePropsContext) => {
   const article = { id: 1, title: 'TITLE' };
   return {
     props: {

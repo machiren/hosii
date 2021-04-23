@@ -9,6 +9,7 @@
       "$prisma/*": ["./server/node_modules/.prisma/*"]
     },
     "allowJs": true,
+    "alwaysStrict": true,
     "skipLibCheck": true,
     "strict": true,
     "strictPropertyInitialization": false,
@@ -16,6 +17,10 @@
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",

@@ -2,7 +2,13 @@ node_modules
 .next
 dist
 out
+server/
 server/migration
 server/index.js
 server/lambda.js
 server/lambda_migration.js
+.eslintrc.js
+next.config.js
+utils/
+test/
+aspida.config.js
