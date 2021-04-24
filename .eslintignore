@@ -3,10 +3,6 @@ node_modules
 dist
 out
 server/
-server/migration
-server/index.js
-server/lambda.js
-server/lambda_migration.js
 .eslintrc.js
 next.config.js
 utils/
