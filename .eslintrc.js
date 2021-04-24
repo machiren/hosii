@@ -4,8 +4,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:react/recommended',
     'plugin:jest/recommended',
+    'plugin:react/recommended',
     'prettier',
   ],
   plugins: ['@typescript-eslint', 'react', 'jest'],
@@ -29,6 +29,7 @@ module.exports = {
     }
   },
   rules: {
+    'semi': 'error',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off'
   },
