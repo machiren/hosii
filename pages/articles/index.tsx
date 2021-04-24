@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
+import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 
 const Articles = (_props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
@@ -13,8 +13,8 @@ const Articles = (_props: InferGetServerSidePropsType<typeof getServerSideProps>
         <a>Link to article</a>
       </Link>
     </>
-  )
-}
+  );
+};
 
 const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePropsContext) => {
   const articles = [{ id: 1, title: 'TITLE' }, { id: 2, title: 'TITLE' }] as const;
@@ -22,7 +22,7 @@ const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePro
     props: {
       articles
     },
-  }
-}
+  };
+};
 
-export default Articles
+export default Articles;

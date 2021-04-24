@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
+import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 
 const Article = (_props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
@@ -9,8 +9,8 @@ const Article = (_props: InferGetServerSidePropsType<typeof getServerSideProps>)
       </Head>
       <p>記事</p>
     </>
-  )
-}
+  );
+};
 
 const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePropsContext) => {
   const article = { id: 1, title: 'TITLE' };
@@ -18,7 +18,7 @@ const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePro
     props: {
       article
     },
-  }
-}
+  };
+};
 
-export default Article
+export default Article;
