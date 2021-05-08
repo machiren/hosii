@@ -14,10 +14,12 @@
     "generate:prisma": "prisma generate",
     "migrate:dev": "prisma migrate dev",
     "migrate:reset": "prisma migrate reset",
+    "seed": "ts-node -r tsconfig-paths/register -P prisma/tsconfig.prisma.json prisma/seed.ts",
     "start": "cross-env NODE_ENV=production node index.js"
   },
   "dependencies": {
     "@prisma/client": "^2.22.1",
+    "bcryptjs": "^2.4.3",
     "class-validator": "^0.13.1",
     "dotenv": "^8.2.0",
     "fastify": "^3.12.0",
@@ -30,6 +32,7 @@
     "fastify-static": "^4.0.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/busboy": "^0.2.3",
     "cross-env": "^7.0.3",
     "frourio": "^0.24.1",
@@ -38,6 +41,7 @@
     "prisma": "^2.22.1",
     "ts-loader": "^8.0.17",
     "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "~4.1.5",
     "webpack": "^5.23.0",

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "paths": {
+      "$/*": ["./*"],
+      "$prisma/*": ["./node_modules/.prisma/*"]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "target": "ES6"
+  }
+}
