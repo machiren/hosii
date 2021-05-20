@@ -47,13 +47,11 @@ model comments {
 }
 
 model wants {
-  id         Int       @id @default(autoincrement())
-  articleId  Int
-  userId     Int
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
-  articles   articles? @relation(fields: [articlesId], references: [id])
-  articlesId Int?
-  users      users?    @relation(fields: [usersId], references: [id])
-  usersId    Int?
+  id        Int      @id @default(autoincrement())
+  articleId Int
+  userId    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  article   articles @relation(fields: [articleId], references: [id])
+  user      users    @relation(fields: [userId], references: [id])
 }
