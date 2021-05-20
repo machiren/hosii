@@ -1,15 +1,16 @@
 import Head from 'next/head';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>frourio-todo-app</title>
+        <title>Hosii</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <h1>Home</h1>
+      <Header />
     </>
   );
-}
+};
 
-export default Home
+export default Home;
