@@ -18,6 +18,7 @@ model users {
   deletedAt DateTime?
   comments  comments[]
   articles  articles[]
+  wants     wants[]
 }
 
 model articles {
@@ -29,6 +30,7 @@ model articles {
   updatedAt DateTime   @updatedAt
   deletedAt DateTime?
   comments  comments[]
+  wants     wants[]
   user      users      @relation(fields: [userId], references: [id])
 }
 
@@ -42,4 +44,16 @@ model comments {
   deletedAt DateTime?
   article   articles  @relation(fields: [articleId], references: [id])
   user      users     @relation(fields: [userId], references: [id])
+}
+
+model wants {
+  id         Int       @id @default(autoincrement())
+  articleId  Int
+  userId     Int
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  articles   articles? @relation(fields: [articlesId], references: [id])
+  articlesId Int?
+  users      users?    @relation(fields: [usersId], references: [id])
+  usersId    Int?
 }
