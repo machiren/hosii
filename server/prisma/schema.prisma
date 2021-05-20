@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model users {
+model Users {
   id        Int        @id @default(autoincrement())
   email     String     @unique
   password  String
@@ -16,42 +16,50 @@ model users {
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   deletedAt DateTime?
-  comments  comments[]
-  articles  articles[]
-  wants     wants[]
+  comments  Comments[]
+  articles  Articles[]
+  wants     Wants[]
+
+  @@map("users")
 }
 
-model articles {
+model Articles {
   id        Int        @id @default(autoincrement())
-  userId    Int
+  userId    Int        @map("user_id")
   title     String
   content   String
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   deletedAt DateTime?
-  comments  comments[]
-  wants     wants[]
-  user      users      @relation(fields: [userId], references: [id])
+  comments  Comments[]
+  wants     Wants[]
+  user      Users      @relation(fields: [userId], references: [id])
+
+  @@map("articles")
 }
 
-model comments {
+model Comments {
   id        Int       @id @default(autoincrement())
-  articleId Int
-  userId    Int
+  articleId Int       @map("article_id")
+  userId    Int       @map("user_id")
   content   String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deletedAt DateTime?
-  article   articles  @relation(fields: [articleId], references: [id])
-  user      users     @relation(fields: [userId], references: [id])
+  article   Articles  @relation(fields: [articleId], references: [id])
+  user      Users     @relation(fields: [userId], references: [id])
+
+  @@map("comments")
 }
 
-model wants {
+model Wants {
   id        Int      @id @default(autoincrement())
-  articleId Int
-  userId    Int
+  articleId Int      @map("article_id")
+  userId    Int      @map("user_id")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  article   articles @relation(fields: [articleId], references: [id])
-  user      users    @relation(fields: [userId], references: [id])
+  article   Articles @relation(fields: [articleId], references: [id])
+  user      Users    @relation(fields: [userId], references: [id])
+
+  @@map("wants")
 }
