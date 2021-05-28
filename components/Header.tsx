@@ -1,5 +1,4 @@
 import { Box, Heading } from '@chakra-ui/react';
-import { useRouter } from 'next/dist/client/router';
 
 const Header = () => {
   return (

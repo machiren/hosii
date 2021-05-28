@@ -33,7 +33,7 @@ model Articles {
   deletedAt DateTime?
   comments  Comments[]
   wants     Wants[]
-  user      Users      @relation(fields: [userId], references: [id])
+  user      Users?     @relation(fields: [userId], references: [id])
 
   @@map("articles")
 }
@@ -46,20 +46,20 @@ model Comments {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deletedAt DateTime?
-  article   Articles  @relation(fields: [articleId], references: [id])
-  user      Users     @relation(fields: [userId], references: [id])
+  article   Articles? @relation(fields: [articleId], references: [id])
+  user      Users?    @relation(fields: [userId], references: [id])
 
   @@map("comments")
 }
 
 model Wants {
-  id        Int      @id @default(autoincrement())
-  articleId Int      @map("article_id")
-  userId    Int      @map("user_id")
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  article   Articles @relation(fields: [articleId], references: [id])
-  user      Users    @relation(fields: [userId], references: [id])
+  id        Int       @id @default(autoincrement())
+  articleId Int       @map("article_id")
+  userId    Int       @map("user_id")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  article   Articles? @relation(fields: [articleId], references: [id])
+  user      Users?    @relation(fields: [userId], references: [id])
 
   @@map("wants")
 }
