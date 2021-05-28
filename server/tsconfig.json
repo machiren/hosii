@@ -14,7 +14,8 @@
     },
     "rootDir": ".",
     "skipLibCheck": true,
-    "strict": true,
+    // "strict": true,
+    "strict": false,
     "strictPropertyInitialization": false,
     "target": "es6"
   }

@@ -4,6 +4,7 @@ export type UserInfo = {
   icon: string
 }
 
+
 export type AuthHeader = {
   authorization: string
 }

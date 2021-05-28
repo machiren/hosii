@@ -1,28 +1,35 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
+import useAspidaSWR from '@aspida/swr';
+import aspida from '@aspida/node-fetch';
+import api from '~/server/api/$api';
 
-const Articles = (_props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const client = api(aspida());
+const Articles = () => {
+  const { data, error } = useAspidaSWR(client.articles);
+  if (error) {
+    return <p>記事の取得に失敗しました</p>
+  }
+  if (!data) {
+    return <p>Loading...</p>
+  }
   return (
     <>
       <Head>
-        <title>記事</title>
+        <title>あったらいいなと思う「欲しい」一覧</title>
       </Head>
       <p>記事一覧</p>
-      <Link href="/articles/1">
-        <a>Link to article</a>
-      </Link>
+      {(
+        data.map(article => (
+          <p>
+            <Link href={`articles/${article.id}`}>
+              <a>{article.title}</a>
+            </Link>
+          </p>
+        ))
+      )}
     </>
   );
-};
-
-const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePropsContext) => {
-  const articles = [{ id: 1, title: 'TITLE' }, { id: 2, title: 'TITLE' }] as const;
-  return {
-    props: {
-      articles
-    },
-  };
 };
 
 export default Articles;
