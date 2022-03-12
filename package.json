@@ -43,7 +43,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^7.27.1",
-    "swr": "^0.4.2"
+    "swr": "^1.2.2"
   },
   "devDependencies": {
     "@aspida/node-fetch": "^1.6.3",
