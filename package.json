@@ -39,7 +39,7 @@
     "class-validator": "^0.13.1",
     "framer-motion": "^6.2.8",
     "next": "^12.1.0",
-    "node-fetch": "^3.2.1",
+    "node-fetch": "^3.2.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^7.27.1",
