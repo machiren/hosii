@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@aspida/fetch": "^1.9.0",
-    "@aspida/node-fetch": "^1.6.3",
+    "@aspida/node-fetch": "^1.9.0",
     "@aspida/swr": "^1.9.0",
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.8.1",
@@ -46,7 +46,7 @@
     "swr": "^1.2.2"
   },
   "devDependencies": {
-    "@aspida/node-fetch": "^1.6.3",
+    "@aspida/node-fetch": "^1.9.0",
     "@testing-library/react": "^12.1.4",
     "@types/jest": "^27.4.1",
     "@types/node": "^14.14.31",
