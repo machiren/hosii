@@ -33,12 +33,12 @@
     "@aspida/fetch": "^1.9.1",
     "@aspida/node-fetch": "^1.9.1",
     "@aspida/swr": "^1.9.1",
-    "@chakra-ui/react": "^1.8.6",
+    "@chakra-ui/react": "^1.8.7",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "class-validator": "^0.13.1",
     "framer-motion": "^6.2.8",
-    "next": "^12.1.0",
+    "next": "^12.1.2",
     "node-fetch": "^3.2.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -71,6 +71,6 @@
     "ts-jest": "^26.5.6",
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
-    "typescript": "~4.6.2"
+    "typescript": "~4.6.3"
   }
 }
