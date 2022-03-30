@@ -33,7 +33,7 @@
     "@aspida/fetch": "^1.9.1",
     "@aspida/node-fetch": "^1.9.1",
     "@aspida/swr": "^1.9.1",
-    "@chakra-ui/react": "^1.8.6",
+    "@chakra-ui/react": "^1.8.7",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "class-validator": "^0.13.1",
