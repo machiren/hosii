@@ -30,7 +30,7 @@
     "check": "npm run typecheck && npm run lint"
   },
   "dependencies": {
-    "@aspida/fetch": "^1.9.1",
+    "@aspida/fetch": "^1.10.2",
     "@aspida/node-fetch": "^1.10.1",
     "@aspida/swr": "^1.9.1",
     "@chakra-ui/react": "^2.0.2",
