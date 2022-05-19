@@ -59,7 +59,7 @@
     "dotenv": "^16.0.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jest": "^26.2.0",
+    "eslint-plugin-jest": "^26.2.2",
     "eslint-plugin-react": "^7.29.4",
     "fastify": "^3.27.4",
     "fastify-cors": "^6.1.0",
