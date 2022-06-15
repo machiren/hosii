@@ -60,7 +60,7 @@
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.2.2",
-    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react": "^7.30.0",
     "fastify": "^3.29.0",
     "fastify-cors": "^6.1.0",
     "identity-obj-proxy": "^3.0.0",
